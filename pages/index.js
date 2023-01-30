@@ -1,11 +1,71 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/landing.module.css'
+import { useState } from 'react';
+import Link from 'next/link'
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+   
+  const [searchVal, setSearchVal] = useState('');
+  let events = [
+      {
+          image:"/usdao.jpeg",
+          name:"Special Session with Surupam Chandra, USDAO.",
+          date:"Feb 4 at 7pm.",
+          description:"In this Session, Surupam Chandra explains about the future of Stablecoins & its Realtime use cases.",
+          website:"https://ur-hackathon-2.devfolio.co/" ,
+          redirect:"https://youtu.be/OIlH0zDAosI" 
+        },
+        {
+          image:"/quill.jpeg",
+          name:"Special Session with Preetam Rao, QuillAudits.",
+          date:" Feb 6 at 7pm.",
+          description:"In this Session, Preetam Rao will share about his Web3 Journey, QuillAudits & more.",
+          website:"https://ur-hackathon-2.devfolio.co/" ,
+          redirect:"https://www.youtube.com/live/g-NFNuIjEF8?feature=share" 
+        },
+        {
+          image:"/strive.jpeg",
+          name:"Special Session with Kartik, Strive.",
+          date:"Feb 9 at 7pm.",
+          description:"In this Session, Kartik will share about his Web3 Journey, Strive & more.",
+                      website:"https://ur-hackathon-2.devfolio.co/" ,
+          redirect:"https://www.youtube.com/live/YT_RvODzlpQ?feature=share" 
+
+        },
+        {
+          image:"/hashlips.jpeg",
+          name:"Special Session with Daniel Eugene, HashLips.",
+          date:"13 Feb at 5pm.",
+          description:"In this Session, Daniel Eugene will share about his Web3 Journey, HashLips & more.",
+                      website:"https://ur-hackathon-2.devfolio.co/" ,
+          redirect:"https://youtube.com/live/KSk7AiF5nY0?feature=share" 
+                 },
+                 {
+                  image:"/buidl.jpeg",
+                  name:"Special Session with Akshay, Buidl Up.",
+                  date:"13 Feb at 8pm.",
+                  description:"In this Session, Akshay will share about his Web3 Journey, Buidl Up & more.",
+                              website:"https://ur-hackathon-2.devfolio.co/" ,
+                  redirect:"https://youtube.com/live/y7Ly4B6Tlxk?feature=share" 
+                          
+                }, 
+                
+      
+    ];
+  const handleInput = (e) => {
+    setSearchVal(e.target.value);
+  }
+  
+  const handleClearBtn = () => {
+    setSearchVal('');
+  }
+  
+  const filteredevents = events.filter((product) => {
+    return product.name.toLowerCase().indexOf(searchVal.toLowerCase()) !== -1;
+  });
   return (
     <>
       <Head>
@@ -14,110 +74,104 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.js</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
-          </div>
-        </div>
+      <div  className={styles.components}>
+   
+   {/* <div className='headerImage'>
+        <img className='image' src='https://www.pixelstalk.net/wp-content/uploads/2016/05/Colorful-Gradient-Wallpaper-HD.jpg' alt=''/>
+   </div> */}
+   <div>
+ <img className={styles.bannerimage} src='/banner.png' alt=''/>
 
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
-          </div>
-        </div>
+ </div>
+   <div className={styles.searchbar}>
+   <div className={styles.container}>
+ <div className={styles.inputwrap}>
+   {/* <i className={styles.fas fa-search}></i> */}
+   <label 
+     for="product-search" 
+     id="input-label"
+   >
+  
+   </label>
+   <input 
+     onChange={handleInput}
+     value={searchVal}
+     type="text" 
+     name="product-search" 
+     id="product-search" 
+     className={styles.productsearch}
+          placeholder="Search events"
+   />
+   <i 
+     onClick={handleClearBtn}
+    //  className={styles}
+   ></i>
+ </div>
+ {/* <div className={styles.}"results-wrap">
+   <ul>
+     {filteredevents.map((product) => {
+       return <li key={product} className={styles.}'list-item'><a href='#'>{product}</a></li>
+     })}
+   </ul>
+ </div> */}
+</div>
+   </div>
+   <em className={styles.italic}>
+     Type event name
+   </em>
+   <p className={styles.featured}>
+     Featured events 📢
+   </p>
+   <div className={styles.cardsbody}>
 
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
+   <div className={styles.allCards}>
+   {filteredevents.map((product) => {
+       return( 
+       
+       // <li key={product} className={styles.}'list-item'><a href='#'>{product}</a></li>
+       <div key={product.name} className={styles.card}>
+       <div className={styles.card__image}>
+         <img src=
+         {product.image} />
+       </div>
+       <div className={styles.card__copy}>
+           <div className={styles.name}>{product.name}</div>
+           <div className={styles.row}>
+           <img className={styles.calendar}
+           src='/icons8-calendar-50.png' alt=''/>&nbsp;<div className={styles.date}>{product.date}</div>
 
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
+           </div>
+         <p>
+           {/* {product.description} */}
+           {/* <button className={styles.}''>
+         
+       
+         
+     
+         </button> */}
+         <button className={styles.button1}><span>
+         <Link 
+         href={{
+          pathname:'/details',
+          query:product
+         }}
+          className={styles.linktext} style={{textDecoration:'none'}}>
+            Get Pass
+           </Link>
+           </span></button>
 
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
+         </p>
+       </div>
+     </div>
+       )
+     })}
+   </div>
+  
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+
+   </div>
+   
+</div>
     </>
   )
 }

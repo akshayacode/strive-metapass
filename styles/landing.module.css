@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+.components{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.featured{
+  font-family: "Bebas Neue";
+  margin-top: 50px;
+  font-size: 60px;
+  color: white;
+}
+.image{
+  /* transform: rotate(90deg); */
+  width: 80%;
+  /* height: 600px; */
+}
+.bannerimage{
+  width: 100%;
+}
+.container {
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 40px;
+  }
+  
+  #input-label {
+    display: none;
+  }
+  
+  .inputwrap {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem 0 1rem;
+    border-radius: 0.8rem;
+    /* background: linear-gradient(90deg, #a6a6a6 -6.6%, #ffffff 48.04%, #ffab35 94.7%); */
+    background-color: rgb(232, 232, 232);
+
+    
+    box-sizing: border-box;
+    border: 2px solid white;
+  }
+  
+  .input-wrap i {
+    font-size: 1rem;
+    color: white;
+  }
+  
+  .productsearch {
+    font-size: 1.1rem;
+    color: black;
+    width: 100%;
+    height: 100%;
+    padding: 0 0 0 1rem;
+    /* background: linear-gradient(90deg, #a6a6a6 -6.6%, #ffffff 48.04%, #ffab35 94.7%);
+     */
+     background-color: rgb(232, 232, 232);
+
+    border: none;
+    outline: none;
+    font-family: Unbounded;
+  }
+  
+  #product-search::placeholder {
+    color: black;
+    opacity: 0.7;
+  }
+  
+  .fa-times:hover {
+    cursor: pointer;
+  }
+  
+  .results-wrap {
+    width: 50%;
+    min-height: 11rem;
+    max-height: auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .list-item {
+    display: inline-flex;
+    word-wrap: initial;
+    list-style-type: none;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    text-transform: capitalize;
+    margin-right: 0.5rem;
+  }
+  
+  .list-item a {
+    color: grey;
+    text-decoration: none;
+  }
+  
+  .list-item a:hover {
+    color: tomato;
+    transition: 200ms ease-in;
+  }
+  
+  @media (max-width: 768px) {
+    .input-wrap {
+      width: 96%;
+    }
+    
+    .results-wrap {
+      width: 96%;
+    }
+  }
+  
+  .image{
+    width: 100%;
+  }
+  .cardsbody{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+   text-align: left; 
+    
+  }
+.allCards{
+    width: 90%;
+flex-wrap: wrap;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+   /* text-align: left; */
+}
+.card {
+    background-color: #FFFFFF;
+    
+    margin: 50px auto;
+    max-width: 400px;
+    min-height: 450px;
+    text-align: center;
+    border-radius: 10px;
+    /* box-shadow: 10px 10px 30px #BDBDBD; */
+  }
+  .italic{
+    color: white;
+    text-align: left;
+  }
+  @media (max-width: 1000px) {
+    .card {
+        background-color: #FFFFFF;
+        margin: 50px auto;
+        max-width: 300px;
+    
+        text-align: center;
+        border-radius: 10px;
+        /* box-shadow: 10px 10px 30px #BDBDBD; */
+      }
+      .featured{
+        font-family: "Bebas Neue";
+        margin-top: 50px;
+        font-size: 30px;
+        color: white;
+        text-align: center;
+      }
+  }
+  .card__image {
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    /* max-height: 200px; */
+    width: 100%;
+  }
+  .card__image img{
+    width: 100%;
+  }
+  .card__copy {
+    padding: 20px;
+  }
+
+ .name{
+    color: black;
+    font-family: Unbounded;
+    margin: 0;
+    text-align: left;
+    font-size: 20px;
+    border-bottom: 2px solid rgb(150, 150, 150);
+    padding-bottom: 20px;
+  }
+  .row
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .calendar{
+width: 20px;height: auto;
+  }
+  .date {
+    color: rgb(156, 156, 156);
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+    text-align: left;
+    font-style: italic;
+    font-size: 20px;
+    margin-top: 10px;
+    /* background: linear-gradient(90deg, #95E1FF -6.6%, #E7B0FF 48.04%, #FBD197 94.7%); */
+    padding: 10px 5px;
+  }
+
+  .custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+  .btn-5 {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: rgb(68, 137, 202);
+  background: linear-gradient(0deg, rgb(68, 137, 202) 0%, rgb(255, 255, 255) 100%);
+  }
+  .btn-5:hover {
+    color: #f0094a;
+    background: transparent;
+     box-shadow:none;
+  }
+  .btn-5:before,
+  .btn-5:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #f0094a;
+    box-shadow:
+     -1px -1px 5px 0px #fff,
+     7px 7px 20px 0px #0003,
+     4px 4px 5px 0px #0002;
+    transition:400ms ease all;
+  }
+  .linktext:hover{
+    color: black;
+  }
+  .linktext{
+    color: white;
+  }
+  .btn-5:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .btn-5:hover:before,
+  .btn-5:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  
+    
+  .button1 {
+    color: white;
+    background-color: black ;
+    border: 5px solid transparent;
+    transition: .2s ease;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 16px; 
+    font-family: Unbounded;
+    font-weight: bold;
+    padding: 5px 0;
+  }
+  
+  .button1:hover {
+    color: black ;
+    background-color: white;
+    transform: scale(1.1);
+    border: 5px solid black ;
+  }
+
+  

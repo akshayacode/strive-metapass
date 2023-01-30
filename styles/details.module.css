@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200&display=swap');
+
+.component{
+
+    background-image: url("https://static.vecteezy.com/system/resources/previews/011/641/982/original/abstract-neon-wave-liqid-background-free-vector.jpg");
+width: 100%;
+background-size: cover;
+height: 100vh;
+position: relative;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+flex-direction: column;
+}
+.wallets{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.topic{
+    width: 100%;
+    font-family: Unbounded;
+   font-weight: bold;
+    font-size: 30px;
+    color: black;
+    background-color: white;
+text-align: center;
+    padding: 20px 0 10px 0;
+}
+.cardBox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.description
+{
+   border-bottom: 1px solid black;
+}
+.detailCard{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 30px;
+    border-radius: 30px;
+    padding: 20px;
+    font-family: Unbounded;
+    font-weight: bold;
+    
+}
+.detailCardImg{
+    background-color: rgba(255, 255, 255, 0.9);
+padding: 25px;
+border-radius: 20px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+/* width: 100%; */
+}
+.detailCardImg img{
+    width: 500px;
+}
+.detailCardBox
+{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: center;
+}
+.boxRow div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    min-height: 50px;
+    /* width: 100%; */
+
+}
+.boxRow{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    /* gap: 30; */
+    width: 100%;
+    font-family: Unbounded;
+    
+}
+.descriptionBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column !important;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center !important;
+    margin-bottom: 20px;
+    font-family: Unbounded;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height:25px;
+    background-color: rgba(255, 255, 255, 0.9);
+
+
+}
+.websiteBox{
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+
+
+}
+.linkBox{
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+
+
+}
+
+.dateBox{
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+
+
+
+}
+
+.dateLine{
+    border-bottom: 1px solid black;
+}
+
+
+.websiteLine{
+    border-bottom: 1px solid black;
+}
+.redirectLine
+{
+    border-bottom: 1px solid black;
+}
+
+.walletbtn{
+    width: 200px !important;
+    /* position: absolute;
+    top: 20px;
+    right: 20px; */
+    margin-top: 20px;
+}
+.walletbtn {
+    color: white;
+    background-color: black ;
+    border: 5px solid transparent;
+    transition: .2s ease;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 16px; 
+    font-family: Unbounded;
+    font-weight: bold;
+    padding: 5px 0;
+    text-align: center;
+  }
+  
+  .walletbtn:hover {
+    color: black ;
+    background-color: white;
+    transform: scale(1.1);
+    border: 5px solid black ;
+  }
+
+  
+@media screen and (max-width:1200px) {
+    
+.component{
+
+    background-image: url("https://static.vecteezy.com/system/resources/previews/011/641/982/original/abstract-neon-wave-liqid-background-free-vector.jpg");
+width: 100%;
+background-size: cover;
+height: 100%;
+}
+    .detailCard{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 30px;
+        border-radius: 30px;
+        padding: 20px;
+        font-family: Unbounded;
+        font-weight: bold;
+        
+    }
+    .detailCardImg{
+        background-color: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+    /* width: 100%; */
+    }
+    .detailCardImg img{
+        width: 100%;
+    }
+    .detailCardBox
+    {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        text-align: center;
+    }
+    .boxRow div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 4px;
+        min-height: 50px;
+        margin: 0 5px 0 5px;
+        /* width: 100%; */
+    
+    }
+
+    .descriptionBox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column !important;
+        background-color: rgba(255, 255, 255, 0.9);
+        color: black;
+        padding: 7px 7px 10px 7px;
+        border-radius: 10px;
+        width: 100%;
+        text-align: center !important;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        font-family: Unbounded;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        font-size: 15px;
+        letter-spacing: 1px;
+        line-height:25px;
+        background-color: rgba(255, 255, 255, 0.9);
+        position: relative;
+        right: 5px;
+    
+    }
+    .websiteBox{
+        margin-top: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.9);
+    
+    
+    }
+    .linkBox{
+        margin-top: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.9);
+    
+    
+    }
+    
+    .dateBox{
+        margin-top: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.9);
+    
+    
+    
+    }
+    
+    .dateLine{
+        border-bottom: 1px solid black;
+    }
+    
+    
+    .websiteLine{
+        border-bottom: 1px solid black;
+    }
+    .redirectLine
+    {
+        border-bottom: 1px solid black;
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
