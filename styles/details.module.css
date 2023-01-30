@@ -299,15 +299,20 @@ height: 100%;
     
     .dateLine{
         border-bottom: 1px solid black;
+        color: black !important;
     }
     
     
     .websiteLine{
         border-bottom: 1px solid black;
+        color: black !important;
+    
     }
     .redirectLine
     {
         border-bottom: 1px solid black;
+        color: black !important;
+    
     }
     
     .topic{
