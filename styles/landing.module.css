@@ -38,7 +38,7 @@
   }
   
   .inputwrap {
-    width: 100%;
+    width: 600px;
     height: 3rem;
     display: flex;
     justify-content: center;
@@ -52,7 +52,11 @@
     box-sizing: border-box;
     border: 2px solid white;
   }
-  
+  @media screen and (max-width:1000px) {
+    .inputwrap{
+width: 100%;
+    }
+  }
   .input-wrap i {
     font-size: 1rem;
     color: white;

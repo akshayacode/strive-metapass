@@ -97,7 +97,7 @@ export default function Details() {
          Date:
             </div>
             
-            <div>
+            <div className={styles.dateData}>
             {event.date}
 
             </div>
