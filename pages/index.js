@@ -82,9 +82,9 @@ export default function Home() {
       </Head>
       <div  className={styles.components}>
    
-   <div className=''>
+   {/* <div className=''>
         <img className={styles.headerImage} src='./strive-logo.png' alt=''/>
-   </div>
+   </div> */}
    <div>
  <img className={styles.bannerimage} src='/strive.png' alt=''/>
 

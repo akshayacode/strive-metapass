@@ -94,6 +94,17 @@ body {
  width: 100vw;
 
 }
+@media screen and (max-width:1000px) {
+  body {
+    background: url(../public/bg-mobile.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* width: 100vw; */
+   
+   }
+}
 
 a {
   color: inherit;

@@ -10,7 +10,9 @@ import {
     useEnsAvatar,
     useEnsName,
   } from 'wagmi'
-   
+  import Web3 from "web3";
+import { abi } from './abi';
+  const web3 = new Web3(Web3.givenProvider);
 export default function Details() {
     const { connect, connectors, error, isLoading, pendingConnector } =
     useConnect()
@@ -27,7 +29,18 @@ export default function Details() {
     // if (isConnected) {
     //  setWallet(address)
     // }
-   
+   const mintNow=async(contractAddress)=>{
+    const contract = new web3.eth.Contract(abi, contractAddress);
+    // const response = await contract.methods
+    // .mint(address,1,1,"")
+    // .send(address);
+    // const tokenId = response.events.Transfer.returnValues.tokenId;
+    // alert(
+    //   `NFT successfully minted. Contract address - ${contractAddress} and Token ID - ${tokenId}`
+    // );
+   console.log(contract)
+
+   }
   return (
     <div className={styles.component}>
       
@@ -60,16 +73,12 @@ export default function Details() {
       ))}
  
     </div>
-    {error ? <div>{error.message}</div>:<div>{address}</div>}
+
 
     <div>
      
     </div>
-    <div className={styles.topic}>
 
-{event.name}
-
-</div>
         <div className={styles.cardBox}>
         <div className={styles.detailCard} >
          <div className={styles.detailCardImg} >
@@ -78,10 +87,24 @@ export default function Details() {
 {/* <p className='topic'>
 {event.name}
 </p> */}
+    <div className={styles.topic}>
+
+{event.name}
+
+</div>
          </div>
          <div className={styles.detailCardBox} >
-
+         {!isConnected ? <div></div>:
+    <div className={styles.mint}>
+      <button onClick={()=>mintNow(event.contract)} 
+             className={styles.walletbtn} 
+             >
+MINT
+      </button>
+      </div>
+    }
          <div className={styles.descriptionBox} >
+          
         <div className={styles.description}>
          Description:
             </div>
@@ -111,7 +134,7 @@ export default function Details() {
             <div>
            
             <a target="_blank" href= {event.website}>
-                <img src='/icons8-internet-30.png' alt=''/>
+                <img className={styles.svgs} src='/icons8-internet-30-w.png' alt=''/>
             </a>
 
             </div>
@@ -123,7 +146,7 @@ export default function Details() {
             
             <div>
             <a target="_blank" href= {event.redirect}>
-                <img src='/icons8-youtube.svg' alt=''/>
+                <img className={styles.svgs}  src='/icons8-youtube-w.svg' alt=''/>
             </a>
 
             </div>
