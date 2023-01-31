@@ -154,16 +154,7 @@ export default function Home() {
 
            </div>
          <p>
-           {/* {product.description} */}
-           {/* <button className={styles.}''>
-         
-       
-         
-     
-         </button> */}
-         {/* <button className={styles.button1}><span>
-       
-           </span></button> */}
+
            <div className={styles.btnBody}>
            <Link 
          href={{
