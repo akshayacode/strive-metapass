@@ -18,7 +18,7 @@ export default function Home() {
       description: "In this Session, Surupam Chandra explains about the future of Stablecoins & its Realtime use cases.",
       website: "https://ur-hackathon-2.devfolio.co/",
       redirect: "https://youtu.be/OIlH0zDAosI",
-      contract: "0xf312C6e4E57DE7b8160FE54745bd0f8ac0A36129"
+      contract: "0x7d2008d3A593Dbf80c012d39A8Cc238d3E2fECA6"
     },
     {
       image: "/quill.jpeg",
@@ -37,7 +37,7 @@ export default function Home() {
       description: "In this Session, Kartik will share about his Web3 Journey, Strive & more.",
       website: "https://ur-hackathon-2.devfolio.co/",
       redirect: "https://www.youtube.com/live/YT_RvODzlpQ?feature=share",
-      contract: "0xc7079838D64A813d1c6FC394c24a9A0E36751D2D"
+      contract: "0xad93EB45d2daa2958AF0F1CC784ED41e565B9522"
 
 
     },
@@ -56,7 +56,7 @@ export default function Home() {
       description: "In this Session, Akshay will share about his Web3 Journey, Buidl Up & more.",
       website: "https://ur-hackathon-2.devfolio.co/",
       redirect: "https://youtube.com/live/y7Ly4B6Tlxk?feature=share",
-      contract: "0x7836a6819F7B1653d72aB91c9D7A0c6e51bA30A6"
+      contract: "0xC2D4E9C8Ef1A786d7a96C306bd959e231d76f788"
 
     },
 
