@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import React, { useState } from 'react'
 import styles from '../styles/details.module.css'
 import Link from 'next/link'
-
+import { motion } from 'framer-motion';
 import {
     useAccount,
     useConnect,
@@ -81,17 +81,47 @@ export default function Details() {
 
         <div className={styles.cardBox}>
         <div className={styles.detailCard} >
-         <div className={styles.detailCardImg} >
+         <div
+         
+         className={styles.detailCardImg} >
 {/* {event.image} */}
-<img src={event.image}/>
+<motion.img 
+ initial="hidden" animate="visible" variants={{
+  hidden: {
+    scale: .8,
+    opacity: 0
+  },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      delay: .2
+    }
+  },
+}}
+src={event.image}/>
 {/* <p className='topic'>
 {event.name}
 </p> */}
-    <div className={styles.topic}>
+    <motion.div
+     initial="hidden" animate="visible" variants={{
+      hidden: {
+        scale: .8,
+        opacity: 0
+      },
+      visible: {
+        scale: 1,
+        opacity: 1,
+        transition: {
+          delay: .3
+        }
+      },
+    }}
+    className={styles.topic}>
 
 {event.name}
 
-</div>
+</motion.div>
          </div>
          <div className={styles.detailCardBox} >
          {!isConnected ? <div></div>:
@@ -103,9 +133,26 @@ MINT
       </button>
       </div>
     }
-         <div className={styles.descriptionBox} >
+
+         <motion.div className={styles.descriptionBox}
+          initial="hidden" animate="visible" variants={{
+            hidden: {
+              scale: .8,
+              opacity: 0
+            },
+            visible: {
+              scale: 1,
+              opacity: 1,
+              transition: {
+                delay: .4
+              }
+            },
+          }}
+         >
           
-        <div className={styles.description}>
+        <div
+        
+        className={styles.description}>
          Description:
             </div>
             
@@ -113,20 +160,27 @@ MINT
             {event.description}
 
             </div>
-</div>
-<div className={styles.boxRow}>
+</motion.div>
+<div 
 
-         <div className={styles.dateBox} >
-            <div className={styles.dateLine}>
-         Date:
-            </div>
-            
-            <div className={styles.dateData}>
-            {event.date}
+className={styles.boxRow}>
 
-            </div>
-            </div>
-            <div className={styles.websiteBox} >
+  
+            <motion.div  
+             initial="hidden" animate="visible" variants={{
+              hidden: {
+                scale: .8,
+                opacity: 0
+              },
+              visible: {
+                scale: 1,
+                opacity: 1,
+                transition: {
+                  delay: .4
+                }
+              },
+            }}
+            className={styles.websiteBox} >
             <div className={styles.websiteLine}>
          Website:
             </div>
@@ -138,8 +192,46 @@ MINT
             </a>
 
             </div>
+            </motion.div>
+            <motion.div
+          initial="hidden" animate="visible" variants={{
+            hidden: {
+              scale: .8,
+              opacity: 0
+            },
+            visible: {
+              scale: 1,
+              opacity: 1,
+              transition: {
+                delay: .4
+              }
+            },
+          }}
+         className={styles.dateBox} >
+            <div className={styles.dateLine}>
+         Date:
             </div>
-            <div className={styles.linkBox} >
+            
+            <div className={styles.dateData}>
+            {event.date}
+
+            </div>
+            </motion.div>
+            <motion.div 
+             initial="hidden" animate="visible" variants={{
+              hidden: {
+                scale: .8,
+                opacity: 0
+              },
+              visible: {
+                scale: 1,
+                opacity: 1,
+                transition: {
+                  delay: .4
+                }
+              },
+            }}
+            className={styles.linkBox} >
             <div className={styles.redirectLine}>
          Watch:
             </div>
@@ -150,7 +242,7 @@ MINT
             </a>
 
             </div>
-            </div>
+            </motion.div>
         </div>
 
         

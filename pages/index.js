@@ -4,6 +4,7 @@ import { Inter } from '@next/font/google'
 import styles from '../styles/landing.module.css'
 import { useState } from 'react';
 import Link from 'next/link'
+import { motion } from 'framer-motion';
 
 
 export default function Home() {
@@ -89,12 +90,26 @@ export default function Home() {
  <img className={styles.bannerimage} src='/strive.png' alt=''/>
 
  </div>
- <div className={styles.imageArray}>
+ <motion.div
+     initial="hidden" animate="visible" variants={{
+      hidden: {
+        scale: .8,
+        opacity: 0
+      },
+      visible: {
+        scale: 1,
+        opacity: 1,
+        transition: {
+          delay: .4
+        }
+      },
+    }}
+ className={styles.imageArray}>
  <img className={styles.bannerimage1} src='/ur-hackathon.png' alt=''/>
  <img className={styles.bannerimage1} src='/web3all.png' alt=''/>
 
 
- </div>
+ </motion.div>
    <div className={styles.searchbar}>
    <div className={styles.container}>
  <div className={styles.inputwrap}>
@@ -134,7 +149,21 @@ export default function Home() {
    <p className={styles.featured}>
      Featured events 📢
    </p>
-   <div className={styles.cardsbody}>
+   <motion.div
+       initial="hidden" animate="visible" variants={{
+        hidden: {
+          scale: .8,
+          opacity: 0
+        },
+        visible: {
+          scale: 1,
+          opacity: 1,
+          transition: {
+            delay: .4
+          }
+        },
+      }}
+   className={styles.cardsbody}>
 
    <div className={styles.allCards}>
    {filteredevents.map((product) => {
@@ -183,7 +212,7 @@ export default function Home() {
   
 
 
-   </div>
+   </motion.div>
    
 </div>
     </>
