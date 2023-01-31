@@ -322,7 +322,7 @@ height: 100%;
     }
     
     .topic{
-        width: max-content;
+        width: 80%;
         font-family: Unbounded;
        font-weight: bold;
         font-size: 20px;
