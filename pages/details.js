@@ -31,11 +31,7 @@ export default function Details() {
   return (
     <div className={styles.component}>
       
-        <div className={styles.topic}>
-
-         {event.name}
-         <hr style={{width:'50%'}} color='white' ></hr>
-        </div>
+   
         <div>
         {/* <button  className={styles.walletbtn} >
           Connect Wallet
@@ -69,6 +65,11 @@ export default function Details() {
     <div>
      
     </div>
+    <div className={styles.topic}>
+
+{event.name}
+
+</div>
         <div className={styles.cardBox}>
         <div className={styles.detailCard} >
          <div className={styles.detailCardImg} >

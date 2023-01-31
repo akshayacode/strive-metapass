@@ -16,7 +16,8 @@ export default function Home() {
           date:"Feb 4 at 7pm.",
           description:"In this Session, Surupam Chandra explains about the future of Stablecoins & its Realtime use cases.",
           website:"https://ur-hackathon-2.devfolio.co/" ,
-          redirect:"https://youtu.be/OIlH0zDAosI" 
+          redirect:"https://youtu.be/OIlH0zDAosI" ,
+          contract:"0xf312C6e4E57DE7b8160FE54745bd0f8ac0A36129"
         },
         {
           image:"/quill.jpeg",
@@ -24,7 +25,9 @@ export default function Home() {
           date:" Feb 6 at 7pm.",
           description:"In this Session, Preetam Rao will share about his Web3 Journey, QuillAudits & more.",
           website:"https://ur-hackathon-2.devfolio.co/" ,
-          redirect:"https://www.youtube.com/live/g-NFNuIjEF8?feature=share" 
+          redirect:"https://www.youtube.com/live/g-NFNuIjEF8?feature=share" ,
+          contract:""
+
         },
         {
           image:"/strive.jpeg",
@@ -32,7 +35,9 @@ export default function Home() {
           date:"Feb 9 at 7pm.",
           description:"In this Session, Kartik will share about his Web3 Journey, Strive & more.",
                       website:"https://ur-hackathon-2.devfolio.co/" ,
-          redirect:"https://www.youtube.com/live/YT_RvODzlpQ?feature=share" 
+          redirect:"https://www.youtube.com/live/YT_RvODzlpQ?feature=share" ,
+          contract:"0xc7079838D64A813d1c6FC394c24a9A0E36751D2D"
+
 
         },
         {
@@ -49,7 +54,8 @@ export default function Home() {
                   date:"13 Feb at 8pm.",
                   description:"In this Session, Akshay will share about his Web3 Journey, Buidl Up & more.",
                               website:"https://ur-hackathon-2.devfolio.co/" ,
-                  redirect:"https://youtube.com/live/y7Ly4B6Tlxk?feature=share" 
+                  redirect:"https://youtube.com/live/y7Ly4B6Tlxk?feature=share" ,
+                  contract:"0x600f1Fb0f41E05Ce881ED81Afd2AFDA306cC883E"
                           
                 }, 
                 
@@ -76,11 +82,17 @@ export default function Home() {
       </Head>
       <div  className={styles.components}>
    
-   {/* <div className='headerImage'>
-        <img className='image' src='https://www.pixelstalk.net/wp-content/uploads/2016/05/Colorful-Gradient-Wallpaper-HD.jpg' alt=''/>
-   </div> */}
+   <div className=''>
+        <img className={styles.headerImage} src='./strive-logo.png' alt=''/>
+   </div>
    <div>
- <img className={styles.bannerimage} src='/banner.png' alt=''/>
+ <img className={styles.bannerimage} src='/strive.png' alt=''/>
+
+ </div>
+ <div className={styles.imageArray}>
+ <img className={styles.bannerimage1} src='/ur-hackathon.png' alt=''/>
+ <img className={styles.bannerimage1} src='/web3all.png' alt=''/>
+
 
  </div>
    <div className={styles.searchbar}>
@@ -149,16 +161,27 @@ export default function Home() {
          
      
          </button> */}
-         <button className={styles.button1}><span>
-         <Link 
+         {/* <button className={styles.button1}><span>
+       
+           </span></button> */}
+           <div className={styles.btnBody}>
+           <Link 
          href={{
           pathname:'/details',
           query:product
          }}
           className={styles.linktext} style={{textDecoration:'none'}}>
+           <button className={styles.btn29}>
+            <span className={styles.textcontainer}>
+              <span className={styles.text}>
+           
             Get Pass
-           </Link>
-           </span></button>
+              </span>
+            </span>
+          </button>
+          </Link>
+
+          </div>
 
          </p>
        </div>

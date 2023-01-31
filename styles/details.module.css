@@ -21,14 +21,18 @@ flex-direction: column;
     margin-bottom: 10px;
 }
 .topic{
-    width: 100%;
+    width: max-content;
     font-family: Unbounded;
    font-weight: bold;
-    font-size: 30px;
+    font-size: 25px;
     color: black;
-    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    /* background-color: white; */
+    background-color: rgba(255, 255, 255, 0.9);
+
 text-align: center;
-    padding: 20px 0 10px 0;
+    padding: 12px ;
+    margin-top: 50px;
 }
 .cardBox{
     width: 100%;
@@ -55,7 +59,7 @@ text-align: center;
 }
 .detailCardImg{
     background-color: rgba(255, 255, 255, 0.9);
-padding: 25px;
+padding: 10px;
 border-radius: 20px;
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
@@ -318,14 +322,15 @@ height: 100%;
     }
     
     .topic{
-        width: 100%;
+        width: max-content;
         font-family: Unbounded;
        font-weight: bold;
         font-size: 20px;
         color: black;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.9);
+
     text-align: center;
-        padding: 20px 0 10px 0;
+        padding: 12px;
     }
     .dateData
     {
